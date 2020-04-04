@@ -2,6 +2,6 @@
 
 <% @requests.each do |request|%>
 <ul>
-    <li> <%= request.first_name%> </li>
+    <li> <%= link_to request.first_name , request %> </li>
 </ul>
 <% end %>
