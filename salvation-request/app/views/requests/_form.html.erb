@@ -1,0 +1,34 @@
+<%= form_with model: @request, local: true do |form| %>
+<p>
+    First Name:
+    <%= form.text_field :first_name %>
+</p>
+
+<p>
+    Last Name:
+    <%= form.text_field :last_name %>
+</p>
+
+<p>
+    Street Adress:
+    <%= form.text_field :street %>
+</p>
+
+<p>
+    City:
+    <%= form.text_field :city %>
+</p>
+
+<p>
+    Zip Code:
+    <%= form.text_field :zip_code %>
+</p>
+
+
+<p>
+    Phone:
+    <%= form.text_field :phone %>
+</p>
+
+<%= form.submit %>
+<% end %>
