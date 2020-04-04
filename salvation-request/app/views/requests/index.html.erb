@@ -1,1 +1,7 @@
 <h1> Welcom to <%= @name%> </h1>
+
+<% @requests.each do |request|%>
+<ul>
+    <li> <%= request.first_name%> </li>
+</ul>
+<% end %>
