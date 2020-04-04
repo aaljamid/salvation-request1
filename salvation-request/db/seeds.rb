@@ -5,3 +5,5 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Request.create(first_name:"first user 1", last_name:"last user 2", street:"street test", city:"test city", zip_code:"1234", phone:"1234567890"  )
