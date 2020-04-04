@@ -26,11 +26,17 @@ class RequestsController < ApplicationController
 
     def update
         request = Request.find(params[:id])
-        request.update(params.require(:request).permit(:first_name, :last_name, :street, :city, :zip_code, :phone))
+        request.update(request_params)
         
         redirect_to requests_path
 
     end
+
+    def destroy
+        Request.find(params[:id]).destroy
+      
+        redirect_to requests_path
+      end
         
   
 

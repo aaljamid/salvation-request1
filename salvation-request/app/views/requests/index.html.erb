@@ -2,6 +2,10 @@
 
 <% @requests.each do |request|%>
 <ul>
-    <li> <%= link_to request.first_name , request %> </li>
+    <li> <%= link_to request.first_name , request %> <a class="btn btn-danger rounded-pill" data-confirm="Are you sure you want to delete <%= request.first_name %>?" data-method="delete" href="/requests/<%= request.id %>" rel="nofollow"><i class="large material-icons">Delete</i>
+        </a></li>
+
+
+
 </ul>
 <% end %>
