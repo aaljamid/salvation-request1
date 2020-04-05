@@ -1,0 +1,24 @@
+<%= form_with model: @request, local: true do |form| %>
+
+
+
+
+<p>
+    Request Type
+    <%= form.select(:request_type, [['Food Support'], ['Babysitting  Service']]) %>
+</p>
+
+<p>
+    First Name:
+    <%= form.text_area :description %>
+</p>
+
+<p>
+    Request Type
+    <%= form.select(:request_status, [['New'], ['In-Progress'], ['Completed']]) %>
+</p>
+
+
+
+<%= form.submit %>
+<% end %>
