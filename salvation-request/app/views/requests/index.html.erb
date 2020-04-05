@@ -15,13 +15,14 @@
                 <%= link_to request.request_type , request %>
             </td>
             <td>
-                <%=  request.request_description  %>
+                <%=  request.request_status  %>
             </td>
 
 
-            <%# 
-    <%= button_to "Delete", {:controller => :requests,
-      :action => 'destroy', :id => request.id }, :method => :delete %>
+            <td>
+                <%= button_to "Delete", {:controller => :requests,
+                 :action => 'destroy', :id => request.id }, :method => :delete %>
+            </td>
 
         </tr>
 
