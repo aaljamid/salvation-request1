@@ -1,0 +1,10 @@
+<h1> Show all requests <h1>
+
+        <ul>
+
+            <li> Type: <%= @request.request_type%> </li>
+            <li> Description: <%= @request.request_description%></li>
+            <li> Status: <%= @request.request_status%></li>
+            <li><%= link_to 'Edit', edit_request_path %></li>
+
+        </ul>

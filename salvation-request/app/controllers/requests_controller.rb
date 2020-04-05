@@ -6,4 +6,8 @@ class RequestsController < ApplicationController
     #    @requests = current_user.requests.all
     end
 
+    def show
+        @request = Request.find(params[:id])
+    end
+
 end
