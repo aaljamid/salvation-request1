@@ -40,7 +40,7 @@ ActiveRecord::Schema.define(version: 2020_04_05_223342) do
     t.string "city"
     t.string "street_address"
     t.integer "phone" 
-    t.integer "role" , default: "normal_user"
+    t.string "role" , default: "normal_user"
   end
 
   add_foreign_key "requests", "users"

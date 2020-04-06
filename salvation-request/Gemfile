@@ -23,6 +23,12 @@ gem 'jbuilder', '~> 2.7'
 # Use Devise gem
 gem 'devise'
 
+# Use Bootstrap
+gem 'bootstrap', '~> 4.4.1'
+
+# Use jQuery
+gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
