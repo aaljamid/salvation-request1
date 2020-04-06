@@ -35,6 +35,12 @@ ActiveRecord::Schema.define(version: 2020_04_05_223342) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+    # new column to the db
+    t.string "name" 
+    t.string "city"
+    t.string "street_address"
+    t.integer "phone" 
+    t.integer "role" , default: "normal_user"
   end
 
   add_foreign_key "requests", "users"

@@ -2,7 +2,7 @@ class RequestsController < ApplicationController
     before_action :authenticate_user!, only: [:new, :index]
     before_action :find_request, except: [:index, :new, :create]
     def index
-        @name = "User 01"
+        @user = User.find_by id:current_user
         # @requests = Request.all
        @requests = current_user.requests.all
     end
