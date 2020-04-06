@@ -1,21 +1,28 @@
 <div class="container">
     <div class="row">
         <div class="col">
-            1 of 3
+            <%# 1 of 3 %>
         </div>
-        <div class="col-8">
-            2 of 3 (wider)
+        <div class="col-6">
+            <%# 2 of 3 (wider) %>
             <%# content  %>
-            <div style="text-align:center;">
-                <h2> Request of <%= @user.name %></h2>
 
-                <%# Add a table for the request  %>
-                <table border=" 1px solid black;">
+            <h2 class="text-center text-monospace"> Request of <%= @user.name %></h2>
+
+            <%# Add a table for the request  %>
+            <table class="table">
+                <thead class="thead-dark">
                     <tr>
-                        <th>Type</th>
-                        <th>Created By</th>
-                        <th>Status</th>
+                        <th scope="col">Type</th>
+                        <th scope="col">Created By</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Edit</th>
+                        <th scope="col">Delete</th>
                     </tr>
+                </thead>
+
+                <tbody>
+
 
                     <% @requests.each do |request|%>
 
@@ -35,18 +42,21 @@
                             <%= button_to "Delete", {:controller => :requests,
                  :action => 'destroy', :id => request.id }, :method => :delete %>
                         </td>
+
                         <td>
                             <button type="button" class="btn btn-danger">Danger</button>
                         </td>
                     </tr>
 
                     <% end %>
-                </table>
-            </div>
+                    </tr>
+                </tbody>
+            </table>
+
 
         </div>
         <div class="col">
-            3 of 3
+            <%# 3 of 3 %>
         </div>
     </div>
 
