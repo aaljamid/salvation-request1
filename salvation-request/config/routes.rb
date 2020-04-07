@@ -6,4 +6,6 @@ Rails.application.routes.draw do
 
   get "bootstrap", to: "requests#bootstrap"
 
+   
+
 end

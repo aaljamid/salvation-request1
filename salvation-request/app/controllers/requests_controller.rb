@@ -1,8 +1,11 @@
 class RequestsController < ApplicationController
     before_action :authenticate_user!, only: [:new, :index]
     before_action :find_request, except: [:index, :new, :create]
+    before_action :user_name 
+
+
     def index
-        @user = User.find_by id:current_user
+       
         # @requests = Request.all
        @requests = current_user.requests.all
     end
@@ -18,6 +21,7 @@ class RequestsController < ApplicationController
 
 
     def new
+        
         @request = Request.new
     end
 
@@ -75,5 +79,10 @@ class RequestsController < ApplicationController
 
     def find_request
         @request = Request.find(params[:id])
+        
+      end
+
+      def user_name 
+        @user = User.find_by id:current_user
       end
 end
