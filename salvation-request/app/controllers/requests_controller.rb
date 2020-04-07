@@ -1,5 +1,5 @@
 class RequestsController < ApplicationController
-    before_action :authenticate_user!, only: [:new, :index]
+    before_action :authenticate_user! 
     before_action :find_request, except: [:index, :new, :create]
     before_action :user_name 
 

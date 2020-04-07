@@ -1,0 +1,36 @@
+h2 {
+  color: #f2ece9;
+  font-size: 2em;
+}
+
+tr {
+  color: #f2ece9;
+  font-size: 1.2em;
+}
+tr > td {
+  color: #f2ece9;
+  font-size: 1.5em;
+}
+
+.container {
+  //   background-color: purple;
+}
+
+.card {
+  background-color: #48736f;
+  color: #f2ece9;
+}
+
+#addbtn {
+  margin-bottom: 10px;
+}
+
+#editbtn {
+  background-color: #f2b56b;
+  color: #f2ece9;
+}
+
+#removebtn {
+  background-color: #a60311;
+  color: #f2ece9;
+}
