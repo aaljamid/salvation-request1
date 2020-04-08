@@ -5,11 +5,11 @@ h2 {
 
 tr {
   color: #f2ece9;
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 tr > td {
   color: #f2ece9;
-  font-size: 1.5em;
+  font-size: 1.2em;
 }
 
 .container {
@@ -19,6 +19,7 @@ tr > td {
 .card {
   background-color: #48736f;
   color: #f2ece9;
+  overflow: scroll;
 }
 
 #addbtn {
@@ -28,9 +29,18 @@ tr > td {
 #editbtn {
   background-color: #f2b56b;
   color: #f2ece9;
+  margin: 10px;
 }
 
 #removebtn {
   background-color: #a60311;
   color: #f2ece9;
+}
+
+tbody {
+  overflow: scroll;
+}
+
+thead {
+  overflow: scroll;
 }
