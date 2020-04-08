@@ -1,0 +1,75 @@
+<div class="d-flex justify-content-center">
+    <div class="card col-10">
+        <div class="card-body">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-12">
+                        <%# 2 of 3 (wider) %>
+                        <%# content  %>
+
+                        <h2 class="text-center">Request List <i class="fas fa-clipboard-list"></i> </h2>
+
+                        <%# Add a table for the request  %>
+
+
+                        <table class="table">
+
+                            <button type="button" class="btn btn-dark" id="addbtn" data-method="get" href="/requests/new"><i class="fas fa-plus-square fa-1x"></i> Add a request</a>
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Type</th>
+                                        <th scope="col">Created By</th>
+                                        <th scope="col">City</th>
+                                        <th scope="col">Status</th>
+                                        <th scope="col">Edit</th>
+                                        <th scope="col"></th>
+                                    </tr>
+                                </thead>
+
+                                <%# All the requests  %>
+                                <tbody>
+                                    <% @requests.each do |request|%>
+
+                                    <tr>
+                                        <td>
+                                            <%=  request.id   %>
+                                        </td>
+                                        <td>
+                                            <%=   request.request_type   %>
+                                        </td>
+                                        <td>
+                                            <%=  @user.name  %>
+                                        </td>
+                                        <td>
+                                            <%=  @user.city  %>
+                                        </td>
+                                        <td>
+                                            <%=  request.request_status  %>
+                                        </td>
+                                        <td>
+                                            <a class="btn" id="removebtn" data-confirm="Are you sure you want to delete" data-method="delete" href="/requests/<%=request.id%>"><i class="fas fa-trash-alt"></i> </a>
+
+                                            <a class="btn" id="editbtn" data-method="get" href="/requests/<%=request.id%>/edit"><i class="far fa-edit"></i></a>
+                                        </td>
+
+                                    </tr>
+
+                                    <% end %>
+                                    </tr>
+                                </tbody>
+                        </table>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+    </div>
+</div>

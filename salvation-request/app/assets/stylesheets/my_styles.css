@@ -1,0 +1,14 @@
+body {
+  background: #d9d2d0;
+  color: #425759;
+  font-family: "Tajawal", sans-serif;
+}
+
+.active {
+  /* background-color: black; */
+}
+
+navbar-nav ml-auto,
+.mx-auto {
+  margin-right: 250px;
+}
