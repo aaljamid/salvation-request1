@@ -29,15 +29,15 @@
                  </div>
              </li>
              <% else %>
-             <li class="nav-item dropdown">
+             <li class="nav-item dropdown active">
                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                      Sign up / Signin
                  </a>
                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                     <a class="dropdown-item" href="#">Action</a>
+                     <a class="dropdown-item" data-method="get" href="/users/sign_in">Sign in</a>
 
-                     <div class="dropdown-divider"></div>
-                     <a class="dropdown-item" href="#">Something else here</a>
+                     <div class=" dropdown-divider"></div>
+                     <a class=" dropdown-item" data-method="get" href="/users/sign_up">Sign up</a>
                  </div>
              </li>
              <% end %>
