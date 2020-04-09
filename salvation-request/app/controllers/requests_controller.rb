@@ -8,8 +8,12 @@ class RequestsController < ApplicationController
        
         # @requests = Request.all
         # @users = User.all
-        if current_user.role == "admin"
-          requests = Request.all
+        if user_signed_in? && current_user.role == "admin"
+          @requests = User.joins(:requests).select("requests.*","users.*")
+          
+
+          
+         
         else
           @requests = current_user.requests.all
         end
