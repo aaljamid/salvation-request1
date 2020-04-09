@@ -8,7 +8,7 @@ class RequestsController < ApplicationController
        
         # @requests = Request.all
         # @users = User.all
-        if current_user.role == "normal_user"
+        if current_user.role == "admin"
           requests = Request.all
         else
           @requests = current_user.requests.all
