@@ -7,7 +7,12 @@ class RequestsController < ApplicationController
     def index
        
         # @requests = Request.all
-       @requests = current_user.requests.all
+        # @users = User.all
+        if current_user.role == "normal_user"
+          requests = Request.all
+        else
+          @requests = current_user.requests.all
+        end
     end
 
     def show

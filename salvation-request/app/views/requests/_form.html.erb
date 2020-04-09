@@ -13,10 +13,12 @@
      <%= form.text_area :request_description %>
  </p>
 
+ <% if current_user.role == "admin"%>
  <p>
      Request Type
      <%= form.select(:request_status, [['New'], ['In-Progress'], ['Completed']]) %>
  </p>
+ <%end%>
 
 
 
