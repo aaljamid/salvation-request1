@@ -9,7 +9,7 @@ class RequestsController < ApplicationController
         # @requests = Request.all
         # @users = User.all
         if user_signed_in? && current_user.role == "admin"
-          @requests = User.joins(:requests).select("requests.*","users.*")
+          @requests = User.joins(:requests).select("requests.*","users.*")  
           
 
           
@@ -44,7 +44,7 @@ class RequestsController < ApplicationController
         @request.user = current_user
     
         if @request.save
-          redirect_to @request
+          redirect_to requests_path
         else
           render 'new'
         end

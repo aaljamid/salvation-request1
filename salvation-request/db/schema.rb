@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 2020_04_08_212941) do
   create_table "requests", force: :cascade do |t|
     t.string "request_type"
     t.string "request_description"
-    t.string "request_status"
+    t.string "request_status", default: "New"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "user_id", null: false
@@ -37,7 +37,7 @@ ActiveRecord::Schema.define(version: 2020_04_08_212941) do
     t.string "city"
     t.string "street_address"
     t.string "phone"
-    t.string "role" , default: "normal_user"
+    t.string "role", default: "normal_user"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

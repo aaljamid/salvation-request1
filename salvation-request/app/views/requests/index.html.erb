@@ -19,12 +19,15 @@
                             <% end%>
                             <thead class="thead-dark">
                                 <tr>
-                                    <th scope="col">#</th>
+                                    <th scope="col">id</th>
                                     <th scope="col">Type</th>
+                                    <%if user_signed_in? && current_user.role == "admin"%>
                                     <th scope="col">Created By</th>
+                                    <th scope="col">Phone</th>
+                                    <%end%>
                                     <th scope="col">City</th>
                                     <th scope="col">Status</th>
-                                    <th scope="col">Edit</th>
+                                    <th scope="col"></th>
                                     <th scope="col"></th>
                                 </tr>
                             </thead>
@@ -40,9 +43,14 @@
                                     <td>
                                         <%=   request.request_type   %>
                                     </td>
+                                    <%if user_signed_in? && current_user.role == "admin"%>
                                     <td>
                                         <%=  request.name    %>
                                     </td>
+                                    <td>
+                                        <%=  request.phone    %>
+                                    </td>
+                                    <% end%>
                                     <td>
                                         <%=  @user.city  %>
                                     </td>
@@ -51,9 +59,9 @@
                                     </td>
                                     <td>
 
-                                        <a class="btn" id="removebtn" data-confirm="Are you sure you want to delete" data-method="delete" href="/requests/<%=request.id%>"><i class="fas fa-trash-alt"></i> </a>
+                                        <a class="btn  flex-row-reverse" id="removebtn" data-confirm="Are you sure you want to delete" data-method="delete" href="/requests/<%=request.id%>"><i class="fas fa-trash-alt"></i> </a>
                                         <% if current_user.role == "admin"%>
-                                        <a class="btn" id="editbtn" data-method="get" href="/requests/<%=request.id%>/edit"><i class="far fa-edit"></i></a>
+                                        <a class="btn   flex-row-reverse" id="editbtn" data-method="get" href="/requests/<%=request.id%>/edit"><i class="far fa-edit"></i></a>
                                         <% end%>
                                     </td>
 
